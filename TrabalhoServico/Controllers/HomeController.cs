@@ -21,8 +21,8 @@ namespace TrabalhoServico.Controllers
 
         public IActionResult Index()
         {
-            var steam = new SteamController();
-            steam.GetSteamGames();
+            //var steam = new SteamController();
+            //steam.GetSteamGames();
 
             return View();
         }

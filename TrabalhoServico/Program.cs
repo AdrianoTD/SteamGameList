@@ -1,3 +1,8 @@
+//account/login
+//account/register
+//Jogo/List
+//Jogo/List?categoria=
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TrabalhoServico.Context;
