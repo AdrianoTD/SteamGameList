@@ -17,8 +17,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddDefaultTokenProviders();
 builder.Services.AddControllersWithViews();
 
-//builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
-//builder.Services.AddTransient<IJogosRepository, JogosRepository>();
+builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddTransient<IJogosRepository, JogosRepository>();
 
 var app = builder.Build();
 
@@ -45,6 +45,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-//app.MapRazorPages();
+app.MapRazorPages();
 
 app.Run();
