@@ -12,14 +12,17 @@ namespace TrabalhoServico.Controllers
         {
             BaseAddress = new Uri("http://api.steampowered.com/"),
         };
-        /*public async void GetSteamGames()
+
+        public async Task<string> GetSteamGames()
         {
             HttpResponseMessage response = await httpClient.GetAsync("ISteamApps/GetAppList/v0002/?key=5B546BDC738461025113E04C3D004A6C&format=json");
 
             var jsonResponse = await response.Content.ReadAsStringAsync();
-        }*/
 
-        public string GetSteamGames()
+            return jsonResponse;
+        }
+
+        /*public string GetSteamGames()
         {
             var url = "http://api.steampowered.com/ISteamApps/GetAppList/v0002/?key=5B546BDC738461025113E04C3D004A6C&format=json";//Paste ur url here  
 
@@ -33,6 +36,6 @@ namespace TrabalhoServico.Controllers
             SteamGames = responseText;
             
             return SteamGames;
-        }  
+        }  */
     }
 }

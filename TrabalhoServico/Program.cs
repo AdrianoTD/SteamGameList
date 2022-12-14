@@ -5,6 +5,7 @@
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 using TrabalhoServico.Context;
 using TrabalhoServico.Repositories;
 using TrabalhoServico.Repositories.Interfaces;
@@ -28,6 +29,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddTransient<IJogosRepository, JogosRepository>();
+
+ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
 
 var app = builder.Build();
 

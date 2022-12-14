@@ -17,8 +17,10 @@ namespace TrabalhoServico.Controllers
             //var jogos = _jogosRepository.Jogos;
             var steam = new SteamController();
 
-            var jogos = steam.GetSteamGames();
-           
+            _jogosRepository.Jogos.FirstOrDefault().Nome = steam.GetSteamGames().ToString();
+
+            var jogos = _jogosRepository.Jogos;
+
             return View(jogos);
         }
     }
