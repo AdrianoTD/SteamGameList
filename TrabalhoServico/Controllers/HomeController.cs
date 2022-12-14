@@ -6,20 +6,16 @@ using TrabalhoServico.Models;
 
 namespace TrabalhoServico.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    //[Route("api/[controller]")]
+    //[ApiController]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
-        }
-
-        public HomeController(AppDbContext context)
-        {
             _context = context;
         }
 
